@@ -24,8 +24,8 @@
   - 6자리 인증 코드 생성 및 이메일 발송
   - 30분 만료 시간 설정
 - **스크린샷 포함 범위**: 
-  - 라인 28-94 (함수 전체)
-  - 특히 라인 42-77 (비즈니스 로직 부분)
+  - `backend/api/auth.py` 라인 28-94 (함수 전체)
+  - 특히 `backend/api/auth.py` 라인 42-77 (비즈니스 로직 부분)
 
 ### 1.2 이메일 인증 확인
 - **엔드포인트**: `POST /api/auth/verify-email`
@@ -35,8 +35,8 @@
   - 만료 시간 확인
   - 인증 완료 상태 업데이트
 - **스크린샷 포함 범위**: 
-  - 라인 97-154 (함수 전체)
-  - 특히 라인 112-137 (검증 로직 부분)
+  - `backend/api/auth.py` 라인 97-154 (함수 전체)
+  - 특히 `backend/api/auth.py` 라인 112-137 (검증 로직 부분)
 
 ### 1.3 회원가입
 - **엔드포인트**: `POST /api/auth/signup`
@@ -47,8 +47,8 @@
   - 비밀번호 해싱 (bcrypt)
   - 사용자 정보 MongoDB 저장
 - **스크린샷 포함 범위**: 
-  - 라인 157-261 (함수 전체)
-  - 특히 라인 176-243 (회원가입 처리 로직)
+  - `backend/api/auth.py` 라인 157-261 (함수 전체)
+  - 특히 `backend/api/auth.py` 라인 176-243 (회원가입 처리 로직)
 
 ### 1.4 로그인
 - **엔드포인트**: `POST /api/auth/login`
@@ -58,8 +58,8 @@
   - JWT Access Token 및 Refresh Token 발급
   - 사용자 정보 반환
 - **스크린샷 포함 범위**: 
-  - 라인 264-356 (함수 전체)
-  - 특히 라인 314-338 (토큰 생성 및 응답 부분)
+  - `backend/api/auth.py` 라인 264-356 (함수 전체)
+  - 특히 `backend/api/auth.py` 라인 314-338 (토큰 생성 및 응답 부분)
 
 ### 1.5 비밀번호 재설정 요청
 - **엔드포인트**: `POST /api/auth/password-reset/request`
@@ -69,8 +69,8 @@
   - 비밀번호 재설정 코드 생성 및 발송
   - 기존 코드 삭제 후 새 코드 저장
 - **스크린샷 포함 범위**: 
-  - 라인 359-443 (함수 전체)
-  - 특히 라인 392-426 (코드 생성 및 발송 부분)
+  - `backend/api/auth.py` 라인 359-443 (함수 전체)
+  - 특히 `backend/api/auth.py` 라인 392-426 (코드 생성 및 발송 부분)
 
 ### 1.6 비밀번호 재설정 확인
 - **엔드포인트**: `POST /api/auth/password-reset/confirm`
@@ -81,8 +81,8 @@
   - 비밀번호 해싱 및 업데이트
   - 사용된 토큰 삭제
 - **스크린샷 포함 범위**: 
-  - 라인 446-553 (함수 전체)
-  - 특히 라인 465-536 (비밀번호 변경 로직)
+  - `backend/api/auth.py` 라인 446-553 (함수 전체)
+  - 특히 `backend/api/auth.py` 라인 465-536 (비밀번호 변경 로직)
 
 ### 1.7 Access Token 갱신
 - **엔드포인트**: `POST /api/auth/refresh`
@@ -93,8 +93,8 @@
   - 사용자 존재 여부 확인
   - 새 Access Token 발급
 - **스크린샷 포함 범위**: 
-  - 라인 556-664 (함수 전체)
-  - 특히 라인 570-647 (토큰 갱신 로직)
+  - `backend/api/auth.py` 라인 556-664 (함수 전체)
+  - 특히 `backend/api/auth.py` 라인 570-647 (토큰 갱신 로직)
 
 ---
 
@@ -110,8 +110,8 @@
   - 대화 제목 설정 (기본값: "새 대화")
   - MongoDB에 대화 정보 저장
 - **스크린샷 포함 범위**: 
-  - 라인 32-69 (함수 전체)
-  - 특히 라인 49-62 (대화 생성 및 응답 부분)
+  - `backend/api/conversations.py` 라인 32-69 (함수 전체)
+  - 특히 `backend/api/conversations.py` 라인 49-62 (대화 생성 및 응답 부분)
 
 ### 2.2 대화 목록 조회
 - **엔드포인트**: `GET /api/conversations`
@@ -121,8 +121,8 @@
   - 해당 사용자의 모든 대화 조회
   - 최신순 정렬
 - **스크린샷 포함 범위**: 
-  - 라인 72-100 (함수 전체)
-  - 특히 라인 85-93 (조회 및 응답 부분)
+  - `backend/api/conversations.py` 라인 72-100 (함수 전체)
+  - 특히 `backend/api/conversations.py` 라인 85-93 (조회 및 응답 부분)
 
 ### 2.3 특정 대화 조회
 - **엔드포인트**: `GET /api/conversations/{conversation_id}`
@@ -132,8 +132,8 @@
   - 사용자 권한 확인 (본인 대화만 조회 가능)
   - 대화 상세 정보 반환
 - **스크린샷 포함 범위**: 
-  - 라인 103-142 (함수 전체)
-  - 특히 라인 117-125 (조회 및 응답 부분)
+  - `backend/api/conversations.py` 라인 103-142 (함수 전체)
+  - 특히 `backend/api/conversations.py` 라인 117-125 (조회 및 응답 부분)
 
 ### 2.4 대화 삭제
 - **엔드포인트**: `DELETE /api/conversations/{conversation_id}`
@@ -143,8 +143,8 @@
   - 사용자 권한 확인
   - 대화 및 관련 메시지 삭제
 - **스크린샷 포함 범위**: 
-  - 라인 145-184 (함수 전체)
-  - 특히 라인 159-167 (삭제 처리 부분)
+  - `backend/api/conversations.py` 라인 145-184 (함수 전체)
+  - 특히 `backend/api/conversations.py` 라인 159-167 (삭제 처리 부분)
 
 ### 2.5 메시지 목록 조회
 - **엔드포인트**: `GET /api/conversations/{conversation_id}/messages`
@@ -154,8 +154,8 @@
   - 사용자 권한 확인
   - 메시지 목록 조회 (순서대로)
 - **스크린샷 포함 범위**: 
-  - 라인 187-229 (함수 전체)
-  - 특히 라인 201-212 (조회 및 응답 부분)
+  - `backend/api/conversations.py` 라인 187-229 (함수 전체)
+  - 특히 `backend/api/conversations.py` 라인 201-212 (조회 및 응답 부분)
 
 ### 2.6 대화방에 메시지 추가 (RESTful)
 - **엔드포인트**: `POST /api/conversations/{conversation_id}/messages`
@@ -166,8 +166,8 @@
   - 벡터 검색을 통한 컨텍스트 제공
   - 응답 메시지 저장
 - **스크린샷 포함 범위**: 
-  - 라인 232-278 (함수 전체)
-  - 특히 라인 249-261 (메시지 처리 및 응답 부분)
+  - `backend/api/conversations.py` 라인 232-278 (함수 전체)
+  - 특히 `backend/api/conversations.py` 라인 249-261 (메시지 처리 및 응답 부분)
 
 ### 2.7 채팅하기 (자동 대화방 생성)
 - **엔드포인트**: `POST /api/conversations/chat`
@@ -177,8 +177,8 @@
   - conversation_id가 있으면 해당 대화방에 메시지 추가
   - AI 챗봇 응답 생성
 - **스크린샷 포함 범위**: 
-  - 라인 281-339 (함수 전체)
-  - 특히 라인 299-322 (자동 생성 및 채팅 처리 부분)
+  - `backend/api/conversations.py` 라인 281-339 (함수 전체)
+  - 특히 `backend/api/conversations.py` 라인 299-322 (자동 생성 및 채팅 처리 부분)
 
 ---
 
@@ -196,17 +196,17 @@
   - API 라우터 등록
   - MongoDB 연결 이벤트
 - **스크린샷 포함 범위**: 
-  - 라인 26-34 (FastAPI 앱 생성)
-  - 라인 36-65 (미들웨어 설정)
-  - 라인 72-113 (예외 핸들러)
-  - 라인 115-118 (라우터 등록)
-  - 라인 121-137 (시작 이벤트)
+  - `backend/main.py` 라인 26-34 (FastAPI 앱 생성)
+  - `backend/main.py` 라인 36-65 (미들웨어 설정)
+  - `backend/main.py` 라인 72-113 (예외 핸들러)
+  - `backend/main.py` 라인 115-118 (라우터 등록)
+  - `backend/main.py` 라인 121-137 (시작 이벤트)
 
 ### 3.2 루트 엔드포인트
 - **엔드포인트**: `GET /api/`
 - **설명**: 애플리케이션 상태 확인 엔드포인트
 - **스크린샷 포함 범위**: 
-  - 라인 140-147 (함수 전체)
+  - `backend/main.py` 라인 140-147 (함수 전체)
 
 ### 3.3 헬스 체크 엔드포인트
 - **엔드포인트**: `GET /api/health`
@@ -216,14 +216,14 @@
   - HyperCLOVA API 키 확인
   - 전체 시스템 상태 반환
 - **스크린샷 포함 범위**: 
-  - 라인 149-213 (함수 전체)
-  - 특히 라인 159-213 (헬스 체크 로직)
+  - `backend/main.py` 라인 149-213 (함수 전체)
+  - 특히 `backend/main.py` 라인 159-213 (헬스 체크 로직)
 
 ### 3.4 메트릭 엔드포인트
 - **엔드포인트**: `GET /api/metrics`
 - **설명**: 시스템 메트릭 정보를 반환하는 엔드포인트
 - **스크린샷 포함 범위**: 
-  - 라인 215-225 (함수 전체)
+  - `backend/main.py` 라인 215-225 (함수 전체)
 
 ---
 
@@ -239,8 +239,8 @@
   - 비동기 HTTP 클라이언트 관리
   - 연결 풀 및 타임아웃 설정
 - **스크린샷 포함 범위**: 
-  - 라인 19-60 (클래스 정의 및 초기화)
-  - 특히 라인 27-60 (초기화 및 클라이언트 설정)
+  - `backend/domain/chat/client.py` 라인 19-60 (클래스 정의 및 초기화)
+  - 특히 `backend/domain/chat/client.py` 라인 27-60 (초기화 및 클라이언트 설정)
 
 ### 4.2 기본 채팅 API 호출
 - **메서드**: `chat()`
@@ -258,9 +258,9 @@
   - `top_p`, `top_k`: 샘플링 파라미터
   - `repetition_penalty`: 반복 패널티
 - **스크린샷 포함 범위**: 
-  - 라인 102-205 (함수 전체)
-  - 특히 라인 131-171 (API 호출 로직)
-  - 라인 173-205 (에러 처리 및 재시도 로직)
+  - `backend/domain/chat/client.py` 라인 102-205 (함수 전체)
+  - 특히 `backend/domain/chat/client.py` 라인 131-171 (API 호출 로직)
+  - `backend/domain/chat/client.py` 라인 173-205 (에러 처리 및 재시도 로직)
 
 ### 4.3 의도 분류 (Intent Classification)
 - **메서드**: `classify_intent()`
@@ -271,8 +271,8 @@
   - 낮은 temperature로 일관된 분류 결과
   - 에러 시 안전하게 수업 관련으로 처리
 - **스크린샷 포함 범위**: 
-  - 라인 207-255 (함수 전체)
-  - 특히 라인 217-250 (의도 분류 로직)
+  - `backend/domain/chat/client.py` 라인 207-255 (함수 전체)
+  - 특히 `backend/domain/chat/client.py` 라인 217-250 (의도 분류 로직)
 
 ### 4.4 컨텍스트 기반 답변 생성
 - **메서드**: `generate_answer()`
@@ -284,9 +284,9 @@
   - 섹션, 강의명, 담당교수 정보를 메타데이터로 포함
   - HyperCLOVA X v3 응답 형식 파싱
 - **스크린샷 포함 범위**: 
-  - 라인 257-389 (함수 전체)
-  - 특히 라인 280-324 (컨텍스트 구성 로직)
-  - 라인 349-389 (API 호출 및 응답 파싱)
+  - `backend/domain/chat/client.py` 라인 257-389 (함수 전체)
+  - 특히 `backend/domain/chat/client.py` 라인 280-324 (컨텍스트 구성 로직)
+  - `backend/domain/chat/client.py` 라인 349-389 (API 호출 및 응답 파싱)
 
 ### 4.5 일상 대화 답변 생성
 - **메서드**: `generate_casual_answer()`
@@ -297,8 +297,8 @@
   - 높은 temperature로 자연스러운 대화 생성
   - 에러 처리 및 기본 응답 제공
 - **스크린샷 포함 범위**: 
-  - 라인 391-446 (함수 전체)
-  - 특히 라인 402-446 (일상 대화 답변 생성 로직)
+  - `backend/domain/chat/client.py` 라인 391-446 (함수 전체)
+  - 특히 `backend/domain/chat/client.py` 라인 402-446 (일상 대화 답변 생성 로직)
 
 ### 4.6 헬퍼 함수
 - **메서드**: `get_hyperclova_client()`
@@ -307,7 +307,7 @@
   - 전역 클라이언트 인스턴스 관리
   - 싱글톤 패턴으로 리소스 효율성 향상
 - **스크린샷 포함 범위**: 
-  - 라인 504-513 (함수 전체)
+  - `backend/domain/chat/client.py` 라인 504-513 (함수 전체)
 
 ### 4.7 HyperCLOVA 사용 예시
 - **파일 위치**: `backend/domain/conversations/service.py`
@@ -320,7 +320,7 @@
   5. 생성된 답변을 데이터베이스에 저장
 - **스크린샷 포함 범위**: 
   - `backend/domain/conversations/service.py`의 `process_chat_message()` 함수
-  - 특히 라인 100-129 (의도 분류 및 답변 생성 부분)
+  - 특히 `backend/domain/conversations/service.py` 라인 100-129 (의도 분류 및 답변 생성 부분)
 
 ### 4.8 헤더 및 메시지 변환 유틸리티
 - **메서드**: `_build_headers()`, `_convert_messages_to_v3_format()`
@@ -330,7 +330,7 @@
   - Request ID 헤더 설정
   - v3 API 형식으로 메시지 변환
 - **스크린샷 포함 범위**: 
-  - 라인 68-100 (헤더 및 변환 함수)
+  - `backend/domain/chat/client.py` 라인 68-100 (헤더 및 변환 함수)
 
 ---
 
